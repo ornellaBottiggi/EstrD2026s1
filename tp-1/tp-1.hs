@@ -87,14 +87,14 @@ Ejemplo: vieneDespues Jueves Lunes = True
 d) estaEnElMedio :: DiaDeSemana -> Bool
 Dado un día de la semana indica si no es ni el primer ni el ultimo dia.-}
 
-data DiaDeSemana = Lunes | Martes | Miércoles | Jueves | Viernes | Sabado | Domingo
+data DiaDeSemana = Lunes | Martes | Miercoles | Jueves | Viernes | Sabado | Domingo
 
 primeroYUltimoDia :: (DiaDeSemana, DiaDeSemana)
 primeroYUltimoDia = (Lunes, Domingo)
 
 empiezaConM :: DiaDeSemana -> Bool
 empiezaConM Martes = True
-empiezaConM Miércoles = True
+empiezaConM Miercoles = True
 empiezaConM _ = False
 
 vieneDespues :: DiaDeSemana -> DiaDeSemana -> Bool
