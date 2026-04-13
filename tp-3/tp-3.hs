@@ -116,7 +116,8 @@ contarTesoros max (Nada c) = cantTesorosEntre 0 (max-1) c
 contarTesoros max (Cofre os c) = cantidadDeTesoros os + cantTesorosEntre 0 (max-1) c  
 
 avanzar :: Int -> Int -> Camino -> Int
-avanzar min max c = cantTesorosEntre (min-1) (max-1) c
+avanzar min max (Nada c)       = cantTesorosEntre (min-1) (max-1) c 
+avanzar min max (Cofre os c) = cantTesorosEntre (min-1) (max-1) c
 
 cantidadDeTesoros :: [Objeto] -> Int
 cantidadDeTesoros []         = 0
